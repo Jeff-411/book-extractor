@@ -4,6 +4,20 @@
 
 This document provides comprehensive information about the testing environment for the Book Extractor utility, which extracts `.docx` files from zip archives and organizes them according to specified output directories.
 
+## Quick Start
+
+Run the following to trigger the full test protocol:
+```bash
+# Clear all test data and logs
+npm run clear 
+# Test correct path resolution for extracted files
+npm run path 
+# Test File Explorer context menu integration    
+npm run menu 
+# Clear all test data and logs
+npm run clear 
+```
+
 ## Overview
 
 The test directory contains scripts and sample data designed to verify the core functionality of the utility. These tests ensure proper operation of file extraction, path resolution, and File Explorer context menu integration. The testing framework provides automated verification of the application's key features to maintain reliability across different environments and use cases.
@@ -104,6 +118,28 @@ npm run menu
 # Clear all test data and logs
 npm run clear 
 ```
+
+### Testing Workflow
+
+For thorough testing of the Wendy Book Extractor application, the recommended workflow is:
+
+1. Clear the test environment: `npm run clear`
+2. Run the path resolution test: `npm run path`
+3. Run the menu integration test: `npm run menu`
+4. Clear the test environment again: `npm run clear`
+
+```bash
+# Clear all test data and logs
+npm run clear 
+# Test correct path resolution for extracted files
+npm run path 
+# Test File Explorer context menu integration    
+npm run menu 
+# Clear all test data and logs
+npm run clear 
+```
+
+This workflow ensures that each test runs in a clean environment and leaves no artifacts that might interfere with subsequent application usage or testing.
 
 ## Test Data
 
