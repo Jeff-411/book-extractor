@@ -1,7 +1,6 @@
 # folders
 _dev
 node_modules
-test/suites/
 
 # files
 *.text
