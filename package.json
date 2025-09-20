@@ -6,9 +6,9 @@
   "type": "module",
   "scripts": {
     "build": "node build-distribution.js",
-    "test:path": "node test/test1_pathResolution.js",
-    "test:menu": "node test/test2_menuIntegration.js",
-    "test:clear": "node test/clearTestData.js"
+    "test:clear": "node test/tools/clearTestData.js",
+    "test:path": "node test/suites/path-resolution/test.js",
+    "test:menu": "node test/suites/menu-integration/test.js"
   },
   "dependencies": {
     "adm-zip": "^0.5.16",

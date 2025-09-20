@@ -1,6 +1,10 @@
+// test/modules/helpers.js - v1.0.1
 /**
  * @fileoverview Helper functions for test data operations
  * @module test/modules/helpers
+ *
+ * History:
+ * - v1.0.1: Fix project root resolution to load .env from repo root and correct relative path logging
  */
 
 import fs from 'fs/promises'
@@ -9,8 +13,9 @@ import dotenv from 'dotenv'
 import PATHS from './paths.js'
 import WARNINGS from './warnings.js'
 
-// Extract rootDir from an existing path for relative path logging
-const rootDir = path.dirname(path.dirname(PATHS.location1))
+// Extract project root for dotenv and relative path logging
+// CRITICAL: must resolve to repo root; PATHS.logs lives at "<repo>/logs"
+const rootDir = path.dirname(PATHS.logs)
 
 const HELPERS = {
   /**
@@ -116,7 +121,7 @@ const HELPERS = {
    * @throws {Error} If OUTPUT_FOLDER environment variable is not defined
    */
   getDocxPath: async function (filename = 'Doc1.docx') {
-    // Load environment variables from .env file
+    // Load environment variables from the repo root .env
     dotenv.config({ path: path.join(rootDir, '.env') })
     // Check if OUTPUT_FOLDER is defined
     if (!process.env.OUTPUT_FOLDER) {
