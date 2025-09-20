@@ -7,15 +7,16 @@ This document provides comprehensive information about the testing environment f
 ## Quick Start
 
 Run the following to trigger the full test protocol:
+
 ```bash
 # Clear all test data and logs
-npm run clear 
+npm run test:clear
 # Test correct path resolution for extracted files
-npm run path 
-# Test File Explorer context menu integration    
-npm run menu 
+npm run test:path
+# Test File Explorer context menu integration
+npm run test:menu
 # Clear all test data and logs
-npm run clear 
+npm run test:clear
 ```
 
 ## Overview
@@ -112,11 +113,11 @@ The test suite includes the following commands:
 
 ```bash
 # Test correct path resolution for extracted files
-npm run path 
-# Test File Explorer context menu integration    
-npm run menu 
+npm run test:path
+# Test File Explorer context menu integration
+npm run test:menu
 # Clear all test data and logs
-npm run clear 
+npm run test:clear
 ```
 
 ### Testing Workflow
@@ -130,13 +131,13 @@ For thorough testing of the Wendy Book Extractor application, the recommended wo
 
 ```bash
 # Clear all test data and logs
-npm run clear 
+npm run test:clear
 # Test correct path resolution for extracted files
-npm run path 
-# Test File Explorer context menu integration    
-npm run menu 
+npm run test:path
+# Test File Explorer context menu integration
+npm run test:menu
 # Clear all test data and logs
-npm run clear 
+npm run test:clear
 ```
 
 This workflow ensures that each test runs in a clean environment and leaves no artifacts that might interfere with subsequent application usage or testing.
