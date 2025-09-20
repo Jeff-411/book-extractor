@@ -1,0 +1,23 @@
+{
+  "name": "book-extractor",
+  "version": "1.0.0",
+  "description": "Extract .docx files from zip archives to Documents/BOOKS",
+  "main": "src/index.js",
+  "type": "module",
+  "scripts": {
+    "build": "node build-distribution.js",
+    "test:path": "node test/test1_pathResolution.js",
+    "test:menu": "node test/test2_menuIntegration.js",
+    "test:clear": "node test/clearTestData.js"
+  },
+  "dependencies": {
+    "adm-zip": "^0.5.16",
+    "dotenv": "^16.4.7",
+    "file-type": "^16.5.4",
+    "node-hide-console-window": "^2.2.0",
+    "winston": "^3.10.0"
+  },
+  "devDependencies": {
+    "esbuild": "^0.25.1"
+  }
+}

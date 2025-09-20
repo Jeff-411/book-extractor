@@ -1,0 +1,10 @@
+# folders
+_dev
+node_modules
+
+# files
+*.text
+#.env
+sample-zip-file.zip
+combined.log
+error.log
